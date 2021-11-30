@@ -11,6 +11,9 @@ public class Lab7Main {
                 System.out.println("Здравствуйте, "+shop.currentUser.getLogin());
                 System.out.println("1. Посмотреть каталоги");
                 System.out.println("2. Посмотреть корзину");
+                if (shop.lastBoughtCart != null) {
+                    System.out.println("3. Последняя купленная корзина");
+                }
             }
             input = sc.nextInt();
             switch (input) {
@@ -42,11 +45,18 @@ public class Lab7Main {
                     break;
                 }
                 case 2: {
-                    shop.showCart();
+                    shop.showCurrentCart();
                     System.out.println("0. Выйти в меню");
                     System.out.println("1. Купить все");
                     int answer = sc.nextInt();
                     if (answer == 1) shop.buyCart();
+                    break;
+                }
+                case 3: {
+                    shop.showLastCart();
+                    System.out.println("0. Выйти в меню");
+                    sc.nextInt();
+                    break;
                 }
             }
         } while (input != -1);

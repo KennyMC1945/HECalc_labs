@@ -1,8 +1,5 @@
 package entity;
 
-/**
- * todo Document type Item
- */
 public class Item {
     String name;
     float price;

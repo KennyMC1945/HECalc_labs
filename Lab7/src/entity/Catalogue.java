@@ -2,9 +2,6 @@ package entity;
 
 import java.util.List;
 
-/**
- * todo Document type Catalogue
- */
 public class Catalogue {
     String name;
     List<Item> items;

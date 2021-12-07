@@ -39,7 +39,7 @@ public class Lab7Main {
                             System.out.println("Выберите какой товар вы хотите добавить в корзину\nИли введите 0 для выхода в меню: ");
                             itemId = sc.nextInt();
                             if (itemId > 0) shop.addToCart(itemId-1, catalogueId-1);
-                        } while(itemId != 0);
+                        } while (itemId != 0);
                     }
 
                     break;
